@@ -1,0 +1,95 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: James Darren Muir
+  headline: Embedded Software Engineer
+  location: Seattle, WA
+  email: jamesmuir@live.com
+  photo:
+  phone: +1-206-715-1480
+  website: https://jamesdarrenmuir.com/
+  social_networks:
+    - network: LinkedIn
+      username: jamesdarrenmuir
+    - network: GitHub
+      username: jamesdarrenmuir
+  custom_connections:
+  sections:
+    education:
+      - institution: University of Washington
+        area: Technology Innovation (Robotics)
+        degree: MS
+        end_date: 2021-12
+        location: Bellevue, WA
+      - institution: University of Washington
+        area: Mechanical Engineering (Mechatronics)
+        degree: BS
+        end_date: 2020-08
+        location: Seattle, WA
+    experience:
+      - company: Amazon
+        position: Embedded Software Engineer
+        start_date: 2024-04
+        end_date: present
+        location: Redmond, WA
+        highlights:
+          - Wrote code for satellites at Project Kuiper, Amazon's satellite internet division
+          - Developed security features to harden custom Yocto-based Linux distro
+          - Patched kernel drivers to support updated BSP for satellite flight computer SoC
+          - Diagnosed performance issues using perf, flamegraphs, strace, and gdb
+          - Automated hardware provenance verification using Python and Jupyter Notebooks
+          - Implemented network commands to burn code signing keys into SoC e-fuses
+      - company: TerraClear
+        position: Robotics Engineer
+        start_date: 2022-03
+        end_date: 2024-04
+        location: Issaquah, WA
+        highlights:
+          - Automated farm equipment including compact track loaders and UTVs
+          - Programmed ROS drivers in Python for UDP-based robot controller communication
+          - Unblocked investor demo by reverse-engineering skid-steer CAN bus commands
+          - Tuned robotic arm hydraulic controller to improve speed and accuracy
+          - Integrated sensors into robot CANopen, J1939, and Ethernet networks
+      - company: MicroVision
+        position: Test Engineering Intern
+        start_date: 2019-06
+        end_date: 2019-09
+        location: Redmond, WA
+        highlights:
+          - Programmed test equipment including an SCPI color sensor for a laser projector
+    skills:
+      - label: Programming Languages
+        details: Python, Bash, C++, C, Java, MATLAB, TypeScript
+      - label: Embedded Systems & Software Engineering
+        details: Linux, Yocto, Object-Oriented Programming, Networking, Debugging, Profiling, Systemd, SSH, Git, Docker, Containers
+      - label: Robotics & Automation
+        details: ROS, Perception, Planning, SLAM, Computer Vision, Machine Learning, CAN, CANopen, J1939
+      - label: Hardware & Electronics
+        details: Oscilloscope, Multimeter, Circuits, eMMC, NOR Flash, MTD Devices, eFUSE, Cryptography, Secure Boot, Encryption
+      - label: CAD & Manufacturing
+        details: SolidWorks, FEA, 3D Printing, CNC
+      - label: Cloud & DevOps
+        details: AWS, CDK, RAID
+      - label: Cybersecurity
+        details: Security Hardening, Drivers, Libraries
+design:
+  theme: classic
+locale:
+  language: english
+settings:
+  current_date: today
+  render_command:
+    output_folder: ../build
+    design:
+    locale:
+    typst_path: OUTPUT_FOLDER/NAME_IN_SNAKE_CASE_CV.typ
+    pdf_path: OUTPUT_FOLDER/NAME_IN_SNAKE_CASE_CV.pdf
+    markdown_path: OUTPUT_FOLDER/NAME_IN_SNAKE_CASE_CV.md
+    html_path: OUTPUT_FOLDER/NAME_IN_SNAKE_CASE_CV.html
+    png_path: OUTPUT_FOLDER/NAME_IN_SNAKE_CASE_CV.png
+    dont_generate_markdown: false
+    dont_generate_html: false
+    dont_generate_typst: false
+    dont_generate_pdf: false
+    dont_generate_png: false
+  bold_keywords: []
+  pdf_title: NAME - CV
