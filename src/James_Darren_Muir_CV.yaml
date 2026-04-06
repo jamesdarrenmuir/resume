@@ -4,13 +4,9 @@ cv:
   headline: Embedded Software Engineer
   location: Seattle, WA
   email: jamesmuir@live.com
-  photo:
   phone: +1-206-715-1480
-  website: https://jamesdarrenmuir.com/
   social_networks:
     - network: LinkedIn
-      username: jamesdarrenmuir
-    - network: GitHub
       username: jamesdarrenmuir
   custom_connections:
   sections:
