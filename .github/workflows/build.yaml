@@ -2,8 +2,6 @@ name: Render a CV
 
 on:
   push:
-    branches:
-      - mainline
   workflow_call: # to make the workflow triggerable from other workflows (release.yaml)
 
 jobs:
@@ -29,3 +27,8 @@ jobs:
           name: James's Resume
           path: build/James_Darren_Muir_CV.pdf
           if-no-files-found: error
+      - name: Release
+        uses: softprops/action-gh-release@v3
+        if: github.ref_type == 'tag'
+        with:
+          files: build/James_Darren_Muir_CV.pdf

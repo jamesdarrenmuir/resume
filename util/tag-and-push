@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -euo pipefail
+
+tag="v$(date -u +'%Y.%m.%d')"
+
+git tag "$tag"
+
+git push origin
+
+git push origin "$tag"
