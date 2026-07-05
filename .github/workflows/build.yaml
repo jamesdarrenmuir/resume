@@ -1,5 +1,8 @@
 name: Render a CV
 
+permissions:
+  contents: write
+
 on:
   push:
   workflow_call: # to make the workflow triggerable from other workflows (release.yaml)
