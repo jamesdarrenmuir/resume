@@ -1,0 +1,30 @@
+name: Render a CV
+
+on:
+  push:
+    branches:
+      - main
+  workflow_call: # to make the workflow triggerable from other workflows (release.yaml)
+
+jobs:
+  rendercv:
+    name: RenderCV
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install RenderCV
+        run: |
+          apt install pipx
+          pipx install rendercv[full]
+      - name: RenderCV
+        run: |
+          make all
+      - name: Upload rendercv_output as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: James's Resume
+          path: build/James_Darren_Muir_CV.pdf
+          if-no-files-found: error
